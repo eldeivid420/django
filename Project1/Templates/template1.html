@@ -1,0 +1,27 @@
+<html>
+    <body>
+    <h1 style="color: red">
+        Hello world
+    </h1>
+    {# this is a test comment#}
+    {% if username == 'Test'%}
+    <p>The user is the main user</p>
+    {% else %}
+    <p>The user is not the main user</p>
+    {% endif %}
+    <p>The username is: {{username}}</p>
+    <p>The color is: {{color}}</p>
+    <p>The actual date is: {{actual_time.day}}/{{actual_time.month}}/{{actual_time.year}}</p>
+    <p>Pets:
+        <ul>
+        {% if pets%} 
+            {% for pet in pets%}
+                <li>{{pet}}</li>
+            {% endfor %}
+        {% else %}
+            <p>The user has no pets</p>
+        {% endif %}
+        </ul>
+    </p>
+    </body>
+    </html>
